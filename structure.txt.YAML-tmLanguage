@@ -1,0 +1,52 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Structure.txt
+scopeName: source.structure.txt
+fileTypes: [structure.txt]
+uuid: d30b715f-6999-437a-b2be-84739d2a3f72
+
+patterns:
+
+- comment: Strings
+  name: string.quoted.single.structure.txt
+  begin: \'
+  end: \'
+
+- comment: Keywords
+  name: keyword.other.structure.txt
+  match: (?i)\b(field|table|links_to|datatype|prompt_type|prompt_description|default|upper_limit|lower_limit|alias|index|view|select_clause|used_for|case_sensitive|choose_type|on_table)\b
+
+- comment: Storage types
+  name: storage.type.structure.txt
+  match: (?<!field)\s+(identity)\b|\b(boolean|integer|text)\b
+
+- comment: Numeric constants
+  name: constant.numeric.structure.txt
+  match: \b\d+\b
+
+- comment: Database Support functions
+  name: support.function.vgl.string
+  match: \b(SELECT|FROM|WHERE|JOIN|ON|NOT IN|AND|OR|INNER JOIN|LEFT JOIN|UNION|LEFT OUTER JOIN|RIGHT JOIN|RIGHT OUTER JOIN|GROUP BY)\b
+
+- comment: >
+    Script blocks to comment changes in the file {START change 1.0}{END change 1.0}
+    Does not do recursive edits yet...
+  name: meta.scriptblock.structure.txt
+  begin: (?i)(\{\s?START\s+)(.*)(\})
+  beginCaptures:
+    '1': {name: markup.heading.structure.txt}
+    '2': {name: variable.parameter.structure.txt}
+    '3': {name: markup.heading.structure.txt}
+  end: (?i)(\{\s?END\s+)(.*)(\})
+  endCaptures:
+    '1': {name: markup.heading.structure.txt}
+    '2': {name: variable.parameter.structure.txt}
+    '3': {name: markup.heading.structure.txt}
+  patterns:
+  - include: $self
+
+- comment: Block Comments
+  name: comment.block
+  begin: \{
+  end: \}
+...

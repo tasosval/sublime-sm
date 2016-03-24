@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+IF ( ${1:condition} ) THEN
+	${2:logic1}
+ELSE
+	${3:logic2}
+ENDIF
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ifelse</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>If else</description>
+</snippet>
+

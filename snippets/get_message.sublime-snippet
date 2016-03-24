@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+GET MESSAGE ( ${1:message_number}, ${2:line_number} )
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>getmessage</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>Get message</description>
+</snippet>

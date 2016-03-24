@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>structure.txt</string>
+	</array>
+	<key>name</key>
+	<string>Structure.txt</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>\'</string>
+			<key>comment</key>
+			<string>Strings</string>
+			<key>end</key>
+			<string>\'</string>
+			<key>name</key>
+			<string>string.quoted.single.structure.txt</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Keywords</string>
+			<key>match</key>
+			<string>(?i)\b(field|table|links_to|datatype|prompt_type|prompt_description|default|upper_limit|lower_limit|alias|index|view|select_clause|used_for|case_sensitive|choose_type|on_table)\b</string>
+			<key>name</key>
+			<string>keyword.other.structure.txt</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Storage types</string>
+			<key>match</key>
+			<string>(?&lt;!field)\s+(identity)\b|\b(boolean|integer|text)\b</string>
+			<key>name</key>
+			<string>storage.type.structure.txt</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numeric constants</string>
+			<key>match</key>
+			<string>\b\d+\b</string>
+			<key>name</key>
+			<string>constant.numeric.structure.txt</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Database Support functions</string>
+			<key>match</key>
+			<string>\b(SELECT|FROM|WHERE|JOIN|ON|NOT IN|AND|OR|INNER JOIN|LEFT JOIN|UNION|LEFT OUTER JOIN|RIGHT JOIN|RIGHT OUTER JOIN|GROUP BY)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.string</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?i)(\{\s?START\s+)(.*)(\})</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading.structure.txt</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.structure.txt</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading.structure.txt</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Script blocks to comment changes in the file {START change 1.0}{END change 1.0} Does not do recursive edits yet...
+</string>
+			<key>end</key>
+			<string>(?i)(\{\s?END\s+)(.*)(\})</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading.structure.txt</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.structure.txt</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>markup.heading.structure.txt</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.scriptblock.structure.txt</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>comment</key>
+			<string>Block Comments</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.structure.txt</string>
+	<key>uuid</key>
+	<string>d30b715f-6999-437a-b2be-84739d2a3f72</string>
+</dict>
+</plist>

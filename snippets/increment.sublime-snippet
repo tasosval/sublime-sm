@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+INCREMENT ( ${1:identity} , "${2:column}" )
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>increment</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>Increment identity column</description>
+</snippet>

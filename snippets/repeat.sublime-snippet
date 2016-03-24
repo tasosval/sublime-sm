@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+REPEAT
+	${2:logic}
+UNTIL ( ${1:condition} )
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>repeat</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>Repeat</description>
+</snippet>
+

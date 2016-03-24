@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+STRIP ( ${1:string} )
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>strip</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>Strip whitespace</description>
+</snippet>
+

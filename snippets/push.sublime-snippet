@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+push_file_descriptor ( "${1:table_name}" , ${2:context} )
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>push</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>Push a snap shot of the current table_name onto the stack</description>
+</snippet>

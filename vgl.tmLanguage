@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rpf</string>
+	</array>
+	<key>name</key>
+	<string>VGL</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>\{</string>
+			<key>comment</key>
+			<string>Block Comments</string>
+			<key>end</key>
+			<string>\}</string>
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\"</string>
+			<key>comment</key>
+			<string>Strings</string>
+			<key>end</key>
+			<string>\"</string>
+			<key>name</key>
+			<string>string.quoted.double.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Storage types</string>
+			<key>match</key>
+			<string>\b(CLASS|DEFINE CLASS|END CLASS|ROUTINE|ENDROUTINE|ARRAY|PACKED_DECIMAL|NUMERIC|LITERAL|ASCII)\b</string>
+			<key>name</key>
+			<string>storage.type.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Storage modifiers</string>
+			<key>match</key>
+			<string>\b(GLOBAL)\b</string>
+			<key>name</key>
+			<string>storage.modifier.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Constants</string>
+			<key>match</key>
+			<string>\b(TRUE|FALSE|EMPTY|NULL|ERROR)\b</string>
+			<key>name</key>
+			<string>constant.language.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numeric constants</string>
+			<key>match</key>
+			<string>\b\d+\b</string>
+			<key>name</key>
+			<string>constant.numeric.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Keywords</string>
+			<key>match</key>
+			<string>\b(RETURN|IF|ELSEIF|ENDIF|THEN|ELSE|DECLARE|SET|ASSIGN|DO|WHILE|ENDWHILE|DELETE|GOSUB|GOTO|AND|NOT|OR|EXIT|CONSTANT|INCLUDE|LABEL|CALL_ROUTINE|REPEAT|UNTIL|VALUE|IN OBJECT)\b</string>
+			<key>name</key>
+			<string>keyword.other.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Support functions</string>
+			<key>match</key>
+			<string>\b(JOIN LIBRARY|JOIN STANDARD_LIBRARY|INCREMENT|CREATE OBJECT)\b</string>
+			<key>name</key>
+			<string>support.function.vgl</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>String Support functions</string>
+			<key>match</key>
+			<string>\b(BLANK|INDEX|FORMAT|GET_CHARACTER_AT|LEFTSTRING|LENGTH|MIDSTRING|RIGHTSTRING|SPLITWORDS|STRING|STRINGLENGTH|STRIP|SUBSTITUTE|SUBSTRING|TOLOWER|TOUPPER|TRUNC|JUSTIFY|NUMBER_TO_TEXT|NUMTEXT|PAD|ORD)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.string</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>UI Support functions</string>
+			<key>match</key>
+			<string>\b(CLEAR LINE|CLEAR SCREEN|CREATE GRAPHICS WINDOW|CREATE TEXT WINDOW|DISPLAY|DRAW GRAPH|DRAW LINE|ENABLE WINDOWS|PASTE GRAPHICS WINDOW|PASTE TEXT WINDOW|PROMPT|PROMPT OBJECT|SCROLL|UNPASTE GRAPHICS WINDOW|UNPASTE TEXT WINDOW|LASTKEY)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.ui</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Math support functions</string>
+			<key>match</key>
+			<string>\b(ABS|ARCCOS|ARCSIN|ARCTAN|COS|DIV|EXP|LN|LOG|MOD|RANDOM|ROUND|SIN|SQRT|TAN)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.math</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>File support functions</string>
+			<key>match</key>
+			<string>\b(FILE CLOSE|FILE COPY|FILE CREATE|FILE DELETE|FILE EXISTS|FILE EXTEND|FILE FIND|FILE OPEN|FILE READ|FILE READ_ARRAY|FILE SEND|FILE WRITE|FILE TOP|FILE WRITE_ARRAY)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.file</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Reporting support functions</string>
+			<key>match</key>
+			<string>\b(LINESLEFT|NEW PAGE|ON NEW PAGE|PLOT COMPLETE|PLOT GRAPH|PLOT LINE|PLOT POINT|PLOT TEXT|SET BARCODE INTRODUCER|SET BARCODE NARROWBAND|SET BARCODE NARROWSPACE|SET BARCODE TYPE|SET BARCODE VARIABLE|SET BARCODE WIDEBAND|SET BARCODE WIDESPACE|SET PRINTERCODES|SET WIDTH|TEST PAGE|SET HEADER|SET FOOTER|SET GRAPH)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.reporting</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Date support functions</string>
+			<key>match</key>
+			<string>\b(DATE|DATE_FORMAT_VALIDATE|DAYNUMBER|INTERVAL|IS_DATE|IS_INTERVAL|NOW|RESTORE DATE FORMAT|SET DATE FORMAT|TODAY)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.date</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Database support functions</string>
+			<key>match</key>
+			<string>\b(SET NOTPROTECTED|COMMIT|LOCKED|NEW ENTRY|NEXT|RESERVE ENTRY|ROLLBACK|SELECT|SELECT AVG|SELECT COUNT|SELECT MAX|SELECT MIN|SELECT SUM|START READ TRANSACTION|START WRITE TRANSACTION|TABLE_NAME|UPDATE|CONSIGN|DECONSIGN)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.database</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Sample support functions</string>
+			<key>match</key>
+			<string>\b(CHANGE JOB STATUS|CHANGE RESULT STATUS|CHANGE SAMPLE STATUS|CHANGE TEST STATUS|DISABLE ON MESSAGE|GET_FIELD_DETAILS|GET_SAMPLE_SYNTAX|GET_TABLE_DETAILS|GET_TEST_RESULTS|GET_USER_MESSAGE|NEW_JOB|NEW_RESULT|NEW_SAMPLE|NEW_TEST|PUT_TEST_RESULTS|RESULT_AUTHORISE|RESULT_DISPLAY|RESULT_ENTRY|RESULT_STRING|RESULT_VALUE|SET BATCH_STATUS|SET JOB_STATUS|SET SAMPLE_STATUS|SET STATUS_CHECK_SUPPRESS|SET TEST_STATUS)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.sample</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Network support functions</string>
+			<key>match</key>
+			<string>\b(PIPE CLOSE|PIPE CREATE|PIPE OPEN|PIPE READ|PIPE WRITE|ON MESSAGE FROM PIPE|WAKEUP)\b</string>
+			<key>name</key>
+			<string>support.function.vgl.networking</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.vgl</string>
+	<key>uuid</key>
+	<string>a3d350c8-9826-42f4-93da-23a41a23c102</string>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+WHILE ${1:condition} DO
+	${2:logic}
+ENDWHILE
+]]></content>
+	<!-- Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>while</tabTrigger>
+	<!-- Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgl</scope>
+	<!-- Description to show in the menu -->
+    <description>While</description>
+</snippet>
+
