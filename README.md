@@ -6,7 +6,7 @@ Provides syntax highlighting for the VGL language (`.rpf` files) and the structu
 
 **Using Sublime Package Control** (recommended): If you have installed [Sublime Package Control](http://wbond.net/sublime_packages/package_control), you can easily install the Sample Manager Language package via the `Package Control: Install Package` menu item (shortcut: **CTRL+SHIFT+P**). Search for `Sample Manager` in the list.
 
-**Without Git:** Download the latest source zip from [github](https://github.com/tasosval/sublime-sm/archive/master) and extract the files to your Sublime Text "Packages" directory, into a new directory named *sublime-sm*.
+**Without Git:** Download the latest source zip from [github](https://github.com/tasosval/sublime-sm/archive/master.zip) and extract the files to your Sublime Text "Packages" directory, into a new directory named *sublime-sm*.
 
 **With Git:** Clone the repository in your Sublime Text "Packages" directory:
 
